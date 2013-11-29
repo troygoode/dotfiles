@@ -1,0 +1,9 @@
+[color]
+	ui = auto
+[user]
+	name = Troy Goode
+	email = troygoode@gmail.com
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
