@@ -21,12 +21,16 @@ do
   if [[ ! "$exclude" =~ ";$file_path;" ]]
   then
     file=$(basename $file_path)
-    if [ -f ~/$file ]
+
+    # backup
+    if [ -f ~/$file ] && [ ! -f $olddir/$file ]
     then
       echo "backing up $(dirname ~/$file)/$file to $(dirname $olddir)/$(basename $olddir)/"
-      rm $olddir/$file
-      mv $(dirname ~/$file)/$file $(dirname $olddir)/$(basename $olddir)/
+      cp -n $(dirname ~/$file)/$file $(dirname $olddir)/$(basename $olddir)/
     fi
+
+    # create link
+    rm $(dirname ~/$file)/$file
     ln -s $file_path ~/$file
     echo "created symlink to ~/$file"
   fi
