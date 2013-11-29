@@ -4,17 +4,18 @@
 ############################
 
 # variables
-current=$(pwd)
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-dir_len=${#dir}
-exclude=";$dir/.git;$dir/symlink;"
+exclude=";$dir/.git;$dir/symlink;$dir/README.md;"
 olddir=~/.dotfiles_old
+
+# run within context of the symlink script directory
+current=$(pwd)
+cd $dir
 
 # create dotfiles_old in homedir
 mkdir -p $olddir
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
-cd $dir
 shopt -s dotglob
 for file_path in $dir/*
 do
@@ -35,5 +36,7 @@ do
     echo "created symlink to ~/$file"
   fi
 done
+
+# return to original working directory
 cd $current
 
