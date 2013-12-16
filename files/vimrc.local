@@ -1,6 +1,11 @@
 set nocursorline " don't highlight current line
 
+let g:tagbar_type_javascript = {
+    \ 'ctagsbin' : '/usr/local/bin/jsctags'
+    \ }
+
 " keyboard shortcuts
+nnoremap <Leader>c :TagbarToggle<CR>
 inoremap jj <ESC>
 
 " gui settings

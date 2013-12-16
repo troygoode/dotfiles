@@ -7,8 +7,23 @@ alias gst='git status --short'
 # move usr/local/bin to front of PATH
 export PATH="/usr/local/bin:$PATH"
 
+# EC2
+export EC2_HOME="$(dirname ~)/$(whoami)/ec2-api-tools-1.6.12.0"
+export PATH="$PATH:$EC2_HOME/bin"
+export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+
+# settings
+export LIVE_RELOAD_PORT=35630 # default port of 35729 is taken by vagrant
+
+if [ -f ~/secrets.sh ]; then
+  source ~/secrets.sh
+fi
+
+NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
+
 # -------------------------------------
 
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
