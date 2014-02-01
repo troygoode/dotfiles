@@ -1,5 +1,10 @@
 set nocursorline " don't highlight current line
 
+" GitGutter
+let g:gitgutter_enabled = 1
+let g:gitgutter_signs = 1
+let g:gitgutter_highlight_lines = 1
+
 let g:tagbar_type_javascript = {
     \ 'ctagsbin' : '/usr/local/bin/jsctags'
     \ }
