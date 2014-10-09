@@ -3,17 +3,27 @@ export PS1='\e[01;37m[\!] \e[01;32m\u\e[00m:\e[01;34m\w \e[01;37m$ \e[00m'
 
 # aliases
 alias gst='git status --short'
+alias vup='vagrant up; vagrant ssh'
+alias vdown='vagrant suspend'
+alias bgg='bower install; grunt build'
 
 # move usr/local/bin to front of PATH
 export PATH="/usr/local/bin:$PATH"
 
+# Docker
+export DOCKER_HOST=tcp://192.168.59.103:2375
+
 # EC2
 export EC2_HOME="$(dirname ~)/$(whoami)/ec2-api-tools-1.6.12.0"
 export PATH="$PATH:$EC2_HOME/bin"
-export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+#export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+export JAVA_HOME=/Library/Java/Home
 
 # settings
 export LIVE_RELOAD_PORT=35630 # default port of 35729 is taken by vagrant
+
+# shakes fist at @scarney81
+ulimit -n 4096
 
 if [ -f ~/secrets.sh ]; then
   source ~/secrets.sh
@@ -27,3 +37,4 @@ NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
+
