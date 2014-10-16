@@ -13,6 +13,10 @@ let g:tagbar_type_javascript = {
 nnoremap <Leader>c :TagbarToggle<CR>
 inoremap jj <ESC>
 
+" EditorConfig
+" make sure to run `brew install editorconfig` first
+let g:EditorConfig_core_mode = 'external_command'
+
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'iTerm.app')

@@ -1,2 +1,3 @@
 Bundle 'Shutnik/jshint2.vim'
 Bundle 'majutsushi/tagbar'
+Bundle 'editorconfig/editorconfig-vim'
