@@ -1,21 +1,46 @@
-set nocursorline " don't highlight current line
+" Troy's Customizations
+" #############################################################################
+
+" Useful to know:
+" ,d   = NERDTree
+" ,t   = CtrlP
+" ,b   = CtrlP (Buffers)
+" ,a   = ag (semi-broken... https://github.com/rking/ag.vim/issues/69)
+" ,c   = TagBar
+" ,hl  = hide search highlights
+" ,ig  = ident guide
+" cs"' = swap " for ' outside current word
 
 " GitGutter
 let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 1
-"let g:gitgutter_highlight_lines = 1
+" let g:gitgutter_highlight_lines = 1
 
 let g:tagbar_type_javascript = {
     \ 'ctagsbin' : '/usr/local/bin/jsctags'
     \ }
 
-" keyboard shortcuts
 nnoremap <Leader>c :TagbarToggle<CR>
-inoremap jj <ESC>
 
 " EditorConfig
 " make sure to run `brew install editorconfig` first
 let g:EditorConfig_core_mode = 'external_command'
+
+au BufRead,BufNewFile *.md set filetype=markdown
+
+set nomodeline
+
+" Maximum Awesome's Default 'Locals'
+" #############################################################################
+
+set nocursorline " don't highlight current line
+
+" keyboard shortcuts
+inoremap jj <ESC>
+
+" highlight search
+set hlsearch
+nmap <leader>hl :let @/ = ""<CR>
 
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
@@ -42,4 +67,3 @@ endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
 
-au BufRead,BufNewFile *.md set filetype=markdown
