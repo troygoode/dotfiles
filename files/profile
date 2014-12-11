@@ -5,7 +5,7 @@ export PS1='\e[01;37m[\!] \e[01;32m\u\e[00m:\e[01;34m\w \e[01;37m$ \e[00m'
 alias gst='git status --short'
 alias vup='vagrant up; vagrant ssh'
 alias vdown='vagrant suspend'
-alias bgg='bower install; grunt build'
+alias bgg='bower install; grunt build; grunt watch'
 
 # move usr/local/bin to front of PATH
 export PATH="/usr/local/bin:$PATH"
