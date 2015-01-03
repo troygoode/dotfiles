@@ -1,5 +1,9 @@
 # prompt
-export PS1='\e[01;37m[\!] \e[01;32m\u\e[00m:\e[01;34m\w \e[01;37m$ \e[00m'
+# OLD: export PS1='\e[01;37m[\!] \e[01;32m\u\e[00m:\e[01;34m\w \e[01;37m$ \e[00m'
+
+. /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+source ~/.profile.ps1
 
 # aliases
 alias gst='git status --short'
@@ -29,12 +33,10 @@ if [ -f ~/secrets.sh ]; then
   source ~/secrets.sh
 fi
 
-NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
+export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
 # -------------------------------------
 
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
