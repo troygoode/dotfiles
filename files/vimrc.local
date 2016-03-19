@@ -20,8 +20,10 @@ let g:tagbar_type_javascript = {
     \ 'ctagsbin' : '/usr/local/bin/jsctags'
     \ }
 
-nnoremap <Leader>c :TagbarToggle<CR>
+" nnoremap <Leader>c :TagbarToggle<CR>
 
+nnoremap \\ :call NERDComment(0,"toggle")<CR>
+vnoremap \\ :call NERDComment(0,"toggle")<CR>
 
 " first remove JSHint.vm!
 " then make sure to run this first:

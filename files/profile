@@ -6,6 +6,9 @@ source ~/.profile.ps1
 # aliases
 alias gst='git status --short'
 
+# this is a dev box
+export NODE_ENV="development"
+
 # move usr/local/bin to front of PATH
 export PATH="/usr/local/bin:$PATH"
 
