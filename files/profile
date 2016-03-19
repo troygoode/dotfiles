@@ -3,6 +3,9 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 source ~/.profile.ps1
 
+# aliases
+alias gst='git status --short'
+
 # move usr/local/bin to front of PATH
 export PATH="/usr/local/bin:$PATH"
 

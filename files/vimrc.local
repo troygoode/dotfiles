@@ -22,6 +22,13 @@ let g:tagbar_type_javascript = {
 
 nnoremap <Leader>c :TagbarToggle<CR>
 
+
+" first remove JSHint.vm!
+" then make sure to run this first:
+" "npm install -g eslint babel-eslint eslint-plugin-react"
+let g:syntastic_javascript_checkers = ['eslint']
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
 " EditorConfig
 " make sure to run `brew install editorconfig` first
 let g:EditorConfig_core_mode = 'external_command'

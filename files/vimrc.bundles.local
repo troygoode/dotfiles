@@ -1,5 +1,5 @@
-Bundle 'Shutnik/jshint2.vim'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'bling/vim-airline'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'wavded/vim-stylus'
+Bundle 'mxw/vim-jsx'
