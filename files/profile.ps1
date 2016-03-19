@@ -1,4 +1,4 @@
-source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-prompt.sh
 HistoryNum="\e[01;37m[\!]"
 
 #  Customize BASH PS1 prompt to show current GIT repository and branch.
