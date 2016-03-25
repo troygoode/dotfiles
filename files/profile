@@ -15,8 +15,8 @@ export PATH="/usr/local/bin:$PATH"
 # shakes fist at @scarney81
 ulimit -n 4096
 
-if [ -f ~/secrets.sh ]; then
-  source ~/secrets.sh
+if [ -f ~/.secrets.sh ]; then
+  source ~/.secrets.sh
 fi
 
 # -------------------------------------
@@ -24,3 +24,6 @@ fi
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+
+export NVM_DIR="/Users/troygoode/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
