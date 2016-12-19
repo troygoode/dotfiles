@@ -25,12 +25,11 @@ let g:tagbar_type_javascript = {
 nnoremap \\ :call NERDComment(0,"toggle")<CR>
 vnoremap \\ :call NERDComment(0,"toggle")<CR>
 
-" first remove JSHint.vm!
+" IMPORTANT: first remove JSHint.vm!
 " then make sure to run this first:
-" "npm install -g eslint babel-eslint eslint-plugin-react"
-let g:syntastic_javascript_checkers = ['standard']
-" let g:syntastic_javascript_checkers = ['eslint']
-" let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+" "npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-flowtype eslint-config-standard eslint-plugin-promise eslint-plugin-standard"
+let g:syntastic_javascript_checkers = ['eslint']
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " EditorConfig
 " make sure to run `brew install editorconfig` first
