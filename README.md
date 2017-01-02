@@ -2,6 +2,12 @@
 
 Troy Goode's custom ~/.dotfiles
 
+# Prerequisites
+
+```bash
+user@macbook ~/ $ yarn global add eslint eslint-plugin-react eslint-plugin-flowtype eslint-config-standard
+```
+
 # Usage
 
 ```bash
