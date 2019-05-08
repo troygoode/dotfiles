@@ -28,8 +28,8 @@ if [ -f ~/.secrets.sh ]; then
 fi
 
 # LANETIX STUFF
-export LXSERVICE_DEFAULT_ADD=staff,database-workers
-. ~/env/.lxprofile
+# export LXSERVICE_DEFAULT_ADD=staff,database-workers
+# . ~/env/.lxprofile
 
 export NVM_DIR="/Users/troy/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
