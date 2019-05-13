@@ -1,41 +1,19 @@
 # prompt
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
-  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
 fi
+
 GIT_PROMPT_ONLY_IN_REPO=1
 GIT_PROMPT_THEME=Single_line
 # GIT_PROMPT_THEME=Evermeet
 # GIT_PROMPT_THEME=Single_line_Ubuntu
-source /usr/local/share/gitprompt.sh
-
-# shakes fist at @scarney81
-ulimit -n 4096
 
 # aliases
 alias gst='git status --short'
 
-# this is a dev box
-# THIS FAILS OUR LANETIX MICROSERVICE STUFF!
-# export NODE_ENV="development"
+export PATH=$HOME/Library/Python/3.7/bin:$PATH
 
-# move usr/local/bin to front of PATH
-export PATH="/usr/local/bin:$PATH"
-
-if [ -f ~/.secrets.sh ]; then
-  source ~/.secrets.sh
-fi
-
-# LANETIX STUFF
-# export LXSERVICE_DEFAULT_ADD=staff,database-workers
-# . ~/env/.lxprofile
-
-export NVM_DIR="/Users/troy/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/dev/tools/istio-1.0.0/bin:$PATH"
-
-# export KUBECONFIG=$HOME/.kube/config-eksCluster
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
